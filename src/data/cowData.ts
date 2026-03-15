@@ -95,6 +95,18 @@ export const cowCards: CowCard[] = [
     liked: true,
     alt: 'A fantastical cow-shark hybrid with a cow\'s head and cowbell, flying over green mountains and meadows.',
   },
+  {
+    id: 'cow-14',
+    imageSrc: '/images/mak-liked/daniil-korbut-oPovFHR5T3A-unsplash-c0a41305-e2b6-435c-99a8-6c8b54b9d3ab.png',
+    liked: true,
+    alt: 'A light brown and white cow with its tongue sticking out and yellow ear tags in a green pasture.',
+  },
+  {
+    id: 'cow-15',
+    imageSrc: '/images/mak-liked/marco-ceschi-edB6BlQrMik-unsplash-86b31689-6c5d-4a11-b664-ba0e402b6e0e.png',
+    liked: true,
+    alt: 'A light brown cow with a white heart-shaped patch on its forehead and short horns.',
+  },
 
   // ========== OTHER COWS (liked: false) ==========
   // Cows that Mak does NOT like.
@@ -139,18 +151,6 @@ export const cowCards: CowCard[] = [
     imageSrc: '/images/other-cows/megumi-nachev-qkQR-OrvZic-unsplash-85227154-5621-4e15-aad1-2836042f7891.png',
     liked: false,
     alt: 'A brown and white cow with its tongue out and yellow ear tags in a green pasture.',
-  },
-  {
-    id: 'other-8',
-    imageSrc: '/images/other-cows/marco-ceschi-edB6BlQrMik-unsplash-86b31689-6c5d-4a11-b664-ba0e402b6e0e.png',
-    liked: false,
-    alt: 'A light brown cow with a white heart-shaped patch on its forehead and short horns.',
-  },
-  {
-    id: 'other-9',
-    imageSrc: '/images/other-cows/daniil-korbut-oPovFHR5T3A-unsplash-c0a41305-e2b6-435c-99a8-6c8b54b9d3ab.png',
-    liked: false,
-    alt: 'A light-colored cow with horns at sunrise or sunset with mountains in the background.',
   },
   {
     id: 'other-10',
