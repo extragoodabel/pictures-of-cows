@@ -5,7 +5,8 @@ export type FeedbackType =
   | 'correct-liked'      // Correct: guessed liked cow correctly
   | 'correct-not-liked'  // Correct: guessed non-liked cow correctly
   | 'incorrect-said-no'  // Incorrect: said no but Mak likes it
-  | 'incorrect-said-yes'; // Incorrect: said yes but Mak doesn't like it
+  | 'incorrect-said-yes' // Incorrect: said yes but Mak doesn't like it
+  | 'mumford';          // Easter egg: Mumford photo (neutral, no score impact)
 
 type FeedbackCowProps = {
   feedbackType: FeedbackType;
@@ -19,6 +20,7 @@ const FEEDBACK_IMAGES: Record<FeedbackType, [string, string]> = {
   'correct-not-liked': ['/images/feedback-cows/doont%20like%20correct.png', '/images/feedback-cows/doont%20like%20correct%20flip.png'],
   'incorrect-said-no': ['/images/feedback-cows/like%20incorrect.png', '/images/feedback-cows/like%20incorrect%20flip.png'],
   'incorrect-said-yes': ['/images/feedback-cows/dont%20like%20incorrect.png', '/images/feedback-cows/dont%20like%20incorrect%20flip.png'],
+  mumford: ['/images/feedback-cows/mumford.PNG', '/images/feedback-cows/mumford%20flip.PNG'],
 };
 
 const MESSAGES: Record<FeedbackType, string> = {
@@ -27,6 +29,7 @@ const MESSAGES: Record<FeedbackType, string> = {
   'incorrect-said-no':
     'It behooves me that you did not know Mak likes this picture of a cow',
   'incorrect-said-yes': 'No, Mak udderly does not like this picture of a cow',
+  mumford: 'This is a picture of Mumford. Mumford is not a cow. But Mak does like this picture.',
 };
 
 export function FeedbackCow({
@@ -66,7 +69,7 @@ export function FeedbackCow({
           >
             Next Cow
           </button>
-          {showAppealButton && onAppeal && (
+          {showAppealButton && feedbackType !== 'mumford' && onAppeal && (
             <button
               type="button"
               className="feedback-cow__btn feedback-cow__btn--secondary"

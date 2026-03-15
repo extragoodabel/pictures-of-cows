@@ -26,11 +26,13 @@ export function GameBoard({ initialCards }: GameBoardProps) {
 
   const currentCard = deck[currentIndex];
   const totalCards = deck.length;
+  const totalCowCards = deck.filter((c) => c.type === 'cow').length;
   const totalAnswered = answered ? currentIndex + 1 : currentIndex;
   const isGameOver = currentIndex >= totalCards;
 
   const getFeedbackType = useCallback(
     (card: CowCard, playerSaidLiked: boolean): FeedbackType => {
+      if (card.type === 'mumford') return 'mumford';
       const actuallyLiked = card.liked;
       if (playerSaidLiked && actuallyLiked) return 'correct-liked';
       if (!playerSaidLiked && !actuallyLiked) return 'correct-not-liked';
@@ -46,9 +48,10 @@ export function GameBoard({ initialCards }: GameBoardProps) {
     (liked: boolean) => {
       if (!currentCard || answered) return;
       setAnswered(true);
-      const isCorrect = liked === currentCard.liked;
+      const isMumford = currentCard.type === 'mumford';
+      const isCorrect = isMumford ? false : liked === currentCard.liked;
       setCorrect(isCorrect);
-      if (isCorrect) setScore((s) => s + 1);
+      if (!isMumford && isCorrect) setScore((s) => s + 1);
       setFeedbackType(getFeedbackType(currentCard, liked));
       setFeedbackVisible(true);
     },
@@ -88,7 +91,7 @@ export function GameBoard({ initialCards }: GameBoardProps) {
     return (
       <EndScreen
         score={score}
-        total={totalCards}
+        total={totalCowCards}
         onReplay={handleReplay}
       />
     );
