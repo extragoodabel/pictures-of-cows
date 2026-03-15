@@ -59,11 +59,16 @@
 
 .app-credit {
   position: fixed;
-  bottom: 0.5rem;
-  right: 0.75rem;
-  font-size: 0.7rem;
+  right: 0;
+  bottom: 0;
+  padding-right: 0.35rem;
+  padding-bottom: 0.5rem;
+  font-size: 0.5rem;
   color: var(--color-pink);
   z-index: 50;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.05em;
 }
 
 @media (min-width: 480px) {
