@@ -1,0 +1,329 @@
+/* Cartoon cow illustration - shared between FeedbackCow and EndScreen */
+.cartoon-cow {
+  display: flex;
+  justify-content: center;
+}
+
+.cartoon-cow__illustration {
+  width: 120px;
+  height: 100px;
+  position: relative;
+}
+
+.cartoon-cow--hero .cartoon-cow__illustration {
+  width: 180px;
+  height: 150px;
+}
+
+.cartoon-cow__body {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 50px;
+  background: #fff;
+  border: 3px solid #333;
+  border-radius: 50% 50% 45% 45%;
+  box-shadow: inset -5px -5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.cartoon-cow--hero .cartoon-cow__body {
+  width: 120px;
+  height: 75px;
+  border-width: 4px;
+}
+
+.cartoon-cow__spot {
+  position: absolute;
+  background: #333;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.cartoon-cow__spot--1 { width: 20px; height: 18px; top: 8px; left: 15px; }
+.cartoon-cow__spot--2 { width: 16px; height: 14px; top: 25px; right: 12px; }
+.cartoon-cow__spot--3 { width: 12px; height: 10px; bottom: 15px; left: 25px; }
+
+.cartoon-cow--hero .cartoon-cow__spot--1 { width: 30px; height: 27px; top: 12px; left: 22px; }
+.cartoon-cow--hero .cartoon-cow__spot--2 { width: 24px; height: 21px; top: 37px; right: 18px; }
+.cartoon-cow--hero .cartoon-cow__spot--3 { width: 18px; height: 15px; bottom: 22px; left: 37px; }
+
+.cartoon-cow__head {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 55px;
+  height: 45px;
+  background: #fff;
+  border: 3px solid #333;
+  border-radius: 50% 50% 45% 45%;
+}
+
+.cartoon-cow--hero .cartoon-cow__head {
+  width: 82px;
+  height: 67px;
+  border-width: 4px;
+}
+
+.cartoon-cow__ear {
+  position: absolute;
+  width: 14px;
+  height: 18px;
+  background: #f5f5f5;
+  border: 2px solid #333;
+  border-radius: 50%;
+  top: -2px;
+}
+
+.cartoon-cow__ear--left { left: -4px; transform: rotate(-20deg); }
+.cartoon-cow__ear--right { right: -4px; transform: rotate(20deg); }
+
+.cartoon-cow--hero .cartoon-cow__ear {
+  width: 21px;
+  height: 27px;
+  border-width: 3px;
+}
+
+.cartoon-cow__ear--left { left: -6px; }
+.cartoon-cow__ear--right { right: -6px; }
+
+.cartoon-cow__eye {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #333;
+  border-radius: 50%;
+  top: 18px;
+}
+
+.cartoon-cow__eye--left { left: 10px; }
+.cartoon-cow__eye--right { right: 10px; }
+
+.cartoon-cow--hero .cartoon-cow__eye {
+  width: 15px;
+  height: 15px;
+  top: 27px;
+}
+
+.cartoon-cow--hero .cartoon-cow__eye--left { left: 15px; }
+.cartoon-cow--hero .cartoon-cow__eye--right { right: 15px; }
+
+.cartoon-cow__muzzle {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 22px;
+  height: 14px;
+  background: var(--color-pink-light);
+  border: 2px solid #333;
+  border-radius: 50%;
+}
+
+.cartoon-cow--hero .cartoon-cow__muzzle {
+  width: 33px;
+  height: 21px;
+  bottom: -8px;
+  border-width: 3px;
+}
+
+/* Heart eyes */
+.cartoon-cow__heart-eyes {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 20px;
+}
+
+.cartoon-cow__heart {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--color-pink);
+  transform: rotate(-45deg);
+  border-radius: 2px;
+}
+
+.cartoon-cow__heart::before,
+.cartoon-cow__heart::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: var(--color-pink);
+  border-radius: 50%;
+}
+
+.cartoon-cow__heart::before { top: -7px; left: 0; }
+.cartoon-cow__heart::after { top: 0; left: -7px; }
+
+.cartoon-cow__heart--left { left: 2px; top: 2px; }
+.cartoon-cow__heart--right { right: 2px; top: 2px; }
+
+.cartoon-cow--hero .cartoon-cow__heart-eyes {
+  top: 18px;
+  width: 75px;
+  height: 30px;
+}
+
+.cartoon-cow--hero .cartoon-cow__heart {
+  width: 21px;
+  height: 21px;
+}
+
+.cartoon-cow--hero .cartoon-cow__heart::before,
+.cartoon-cow--hero .cartoon-cow__heart::after {
+  width: 21px;
+  height: 21px;
+}
+
+.cartoon-cow--hero .cartoon-cow__heart::before { top: -10px; }
+.cartoon-cow--hero .cartoon-cow__heart::after { left: -10px; }
+
+/* Hooves X */
+.cartoon-cow__hooves-x {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 25px;
+}
+
+.cartoon-cow__hooves-x .cartoon-cow__hoof {
+  position: absolute;
+  width: 18px;
+  height: 8px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 4px;
+}
+
+.cartoon-cow__hooves-x .cartoon-cow__hoof--tl { top: 0; left: 0; transform: rotate(-35deg); }
+.cartoon-cow__hooves-x .cartoon-cow__hoof--tr { top: 0; right: 0; transform: rotate(35deg); }
+.cartoon-cow__hooves-x .cartoon-cow__hoof--bl { bottom: 0; left: 5px; transform: rotate(35deg); }
+.cartoon-cow__hooves-x .cartoon-cow__hoof--br { bottom: 0; right: 5px; transform: rotate(-35deg); }
+
+.cartoon-cow--hero .cartoon-cow__hooves-x {
+  bottom: 8px;
+  width: 75px;
+  height: 37px;
+}
+
+.cartoon-cow--hero .cartoon-cow__hooves-x .cartoon-cow__hoof {
+  width: 27px;
+  height: 12px;
+  border-width: 3px;
+}
+
+/* Thumbs up */
+.cartoon-cow__thumbs-up {
+  position: absolute;
+  bottom: 8px;
+  right: -15px;
+  width: 24px;
+  height: 30px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 4px;
+  transform: rotate(-15deg);
+}
+
+.cartoon-cow__thumbs-up::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 8px;
+  height: 12px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 4px;
+}
+
+.cartoon-cow--hero .cartoon-cow__thumbs-up {
+  bottom: 12px;
+  right: -22px;
+  width: 36px;
+  height: 45px;
+  border-width: 3px;
+}
+
+.cartoon-cow--hero .cartoon-cow__thumbs-up::after {
+  width: 12px;
+  height: 18px;
+  border-width: 3px;
+}
+
+/* Shrug */
+.cartoon-cow__shrug {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 25px;
+}
+
+.cartoon-cow__shrug .cartoon-cow__hoof {
+  position: absolute;
+  width: 18px;
+  height: 8px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 4px;
+}
+
+.cartoon-cow__shrug .cartoon-cow__hoof--l { top: 0; left: 0; transform: rotate(-60deg); }
+.cartoon-cow__shrug .cartoon-cow__hoof--r { top: 0; right: 0; transform: rotate(60deg); }
+
+.cartoon-cow--hero .cartoon-cow__shrug {
+  bottom: 8px;
+  width: 105px;
+  height: 37px;
+}
+
+.cartoon-cow--hero .cartoon-cow__shrug .cartoon-cow__hoof {
+  width: 27px;
+  height: 12px;
+  border-width: 3px;
+}
+
+/* Arms crossed */
+.cartoon-cow__arms-crossed {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70px;
+  height: 25px;
+}
+
+.cartoon-cow__arms-crossed .cartoon-cow__hoof {
+  position: absolute;
+  width: 22px;
+  height: 8px;
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 4px;
+}
+
+.cartoon-cow__arms-crossed .cartoon-cow__hoof--l { top: 5px; left: 0; transform: rotate(25deg); }
+.cartoon-cow__arms-crossed .cartoon-cow__hoof--r { top: 5px; right: 0; transform: rotate(-25deg); }
+
+.cartoon-cow--hero .cartoon-cow__arms-crossed {
+  bottom: 8px;
+  width: 105px;
+  height: 37px;
+}
+
+.cartoon-cow--hero .cartoon-cow__arms-crossed .cartoon-cow__hoof {
+  width: 33px;
+  height: 12px;
+  border-width: 3px;
+}

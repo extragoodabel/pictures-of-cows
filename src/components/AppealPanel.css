@@ -1,0 +1,87 @@
+.appeal-panel {
+  margin-top: 1rem;
+  padding: 1.25rem;
+  background: #fff;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-pink-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.appeal-panel__label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.appeal-panel__helper {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.appeal-panel__textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  resize: vertical;
+  margin-bottom: 0.5rem;
+}
+
+.appeal-panel__textarea:focus {
+  outline: none;
+  border-color: var(--color-pink);
+}
+
+.appeal-panel__char-count {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.appeal-panel__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.appeal-panel__btn {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+.appeal-panel__btn--share {
+  background: var(--color-pink);
+  color: #fff;
+}
+
+.appeal-panel__btn--share:hover {
+  background: var(--color-pink-dark);
+}
+
+.appeal-panel__btn--cancel {
+  background: #fff;
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+}
+
+.appeal-panel__btn--cancel:hover {
+  border-color: var(--color-pink);
+  color: var(--color-pink-dark);
+}
+
+.appeal-panel__toast {
+  margin-top: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  background: var(--color-pink-light);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+}

@@ -1,0 +1,122 @@
+.appeal-modal__backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.appeal-modal {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--color-pink-light);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  max-width: 420px;
+  width: 100%;
+  max-height: calc(100vh - 2rem);
+  overflow-y: auto;
+}
+
+.appeal-modal__title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0 0 0.5rem;
+}
+
+.appeal-modal__helper {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin: 0 0 1rem;
+}
+
+.appeal-modal__textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  resize: vertical;
+  margin-bottom: 0.5rem;
+}
+
+.appeal-modal__textarea:focus {
+  outline: none;
+  border-color: var(--color-pink);
+}
+
+.appeal-modal__char-count {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.appeal-modal__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.appeal-modal__btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  min-height: 48px;
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+.appeal-modal__btn:focus-visible {
+  outline: 2px solid var(--color-pink);
+  outline-offset: 2px;
+}
+
+.appeal-modal__btn--share {
+  background: var(--color-pink);
+  color: #fff;
+}
+
+.appeal-modal__btn--share:hover {
+  background: var(--color-pink-dark);
+}
+
+.appeal-modal__btn--secondary {
+  background: #fff;
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+}
+
+.appeal-modal__btn--secondary:hover {
+  border-color: var(--color-pink);
+  color: var(--color-pink-dark);
+}
+
+.appeal-modal__btn--primary {
+  width: 100%;
+  background: var(--color-pink);
+  color: #fff;
+}
+
+.appeal-modal__btn--primary:hover {
+  background: var(--color-pink-dark);
+}
+
+.appeal-modal__toast {
+  margin: 0 0 1rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  background: var(--color-pink-light);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+}

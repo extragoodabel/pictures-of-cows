@@ -1,0 +1,120 @@
+.feedback-cow {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+  z-index: 100;
+  animation: feedback-slide-up 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  max-width: 100%;
+  width: min(520px, calc(100% - 1rem));
+  margin: 0 0.5rem 0.5rem;
+  overflow: visible;
+  background: transparent;
+}
+
+@keyframes feedback-slide-up {
+  to {
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+.feedback-cow__card {
+  position: relative;
+  background: #fff;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.12);
+  /* Top padding accommodates overlapping cow; white block for text + buttons */
+  padding: 2.5rem 1.25rem 1rem;
+  border: 2px solid var(--color-pink-light);
+  overflow: visible;
+}
+
+/* Cow overlaps card slightly so they feel connected */
+.feedback-cow__character {
+  position: absolute;
+  bottom: calc(100% - 48px);
+  left: 0;
+  right: 0;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  pointer-events: none;
+  overflow: visible;
+  background: transparent;
+}
+
+.feedback-cow__character--left {
+  justify-content: flex-start;
+  padding-left: -0.5rem;
+}
+
+.feedback-cow__character--right {
+  justify-content: flex-end;
+  padding-right: -0.5rem;
+}
+
+.feedback-cow__character--left .feedback-cow__image {
+  margin-left: -6rem;
+}
+
+.feedback-cow__character--right .feedback-cow__image {
+  margin-right: -6rem;
+}
+
+.feedback-cow__image {
+  display: block;
+  width: 420px;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  object-position: bottom center;
+  background: transparent;
+  vertical-align: bottom;
+}
+
+.feedback-cow__content {
+  /* Compact block - white card only holds text + buttons */
+}
+
+.feedback-cow__message {
+  font-size: 1.35rem;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--color-text);
+  margin: 0 0 0.75rem;
+}
+
+.feedback-cow__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.feedback-cow__btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  min-height: 48px;
+}
+
+.feedback-cow__btn--primary {
+  background: var(--color-pink);
+  color: #fff;
+}
+
+.feedback-cow__btn--primary:hover {
+  background: var(--color-pink-dark);
+}
+
+.feedback-cow__btn--secondary {
+  background: #fff;
+  color: var(--color-text);
+  border: 2px solid var(--color-border);
+}
+
+.feedback-cow__btn--secondary:hover {
+  border-color: var(--color-pink);
+  color: var(--color-pink-dark);
+}
